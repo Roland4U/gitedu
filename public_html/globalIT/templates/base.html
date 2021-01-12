@@ -1,0 +1,489 @@
+{% load static %}
+{% load %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        {% block title %}
+        Global IT Education Center | Գլոբալ ԻՏ Ուսումնական Կենտրոն
+        {% endblock %}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta name="facebook-domain-verification" content="zeonn2jodbxc5r91su9iprm3wp581m" />
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favikon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+
+
+    <!-- CSS slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <link rel="stylesheet" href="{% static 'dist/style.css' %}">
+
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'facultet/css/design.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NDKC9KH');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '203401651094908');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=203401651094908&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDKC9KH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area " style="background: -webkit-linear-gradient(left, #a64eee 0%, #3c35ce 100%);">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="/">
+                                    <img src="{% static 'img/logogit.png' %}" alt="" width="250px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/">Գլխավոր</a></li>
+                                        <li><a href="{% url 'facultets' %}">Դասընթացներ</a></li>
+                                        {% if services %}
+                                        <li><a href="#">Ծառայություններ <i class="fas fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                {% for sers in services %}
+                                                <li><a
+                                                        href="{% url 'service_det' serv_slug=sers.slug %}">{{sers.name}}</a>
+                                                </li>
+                                                {% endfor %}
+                                                <!-- <li><a href="#">Խաղերի պատրաստում</a></li>
+                                                <li><a href="#">Ֆիլմերի պատրաստում</a></li>
+                                                <li><a href="#">Եռաչափ մոդելավորում</a></li> -->
+                                            </ul>
+                                        </li>
+                                        {% endif %}
+                                        <li><a href="{% url 'about' %}">Մեր մասին</a></li>
+                                        <!-- <li><a href="#">Բլոգ <i class="fas fa-chevron-down"></i></a> -->
+                                        <!-- <ul class="submenu">
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="single-blog.html">single-blog</a></li>
+                                            </ul> -->
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        {% if user.is_authenticated %}
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+                                <a href="{% url 'logout' %}" class="user_info_div">
+                                    <span>
+                                        <i class="fas fa-user-alt"></i> {{ user.get_full_name }}
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+                                <!--                                 <a href="#test-form" class="login popup-with-form">                                    
+                                    <span><i class="fas fa-user-alt"></i>Մուտք</span>
+                                </a> -->
+                                <div class="live_chat_btn">
+                                    <a class="boxed_btn_orange popup-with-form" href="#numbers-form">
+                                        <span><i class="fa fa-phone"></i>Զանգահարել</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="body_main_div">
+        {% block main %}
+
+
+        {% endblock %}
+    </div>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5e10a03327773e0d832bd71f/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!-- footer -->
+    <footer class="footer footer_bg_1">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="{% static 'img/logogit.png' %}" alt="" width="250px">
+                                </a>
+                            </div>
+                            <p>
+                                «ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից: Մենք
+                                առաջարկում ենք ծրագրային տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել Ձեր բիզնեսի
+                                շահութաբերությունը և նպաստել աճին: Մեր ստեղծարար թիմը համատեղ ուժերով տալիս Է
+                                նորարարական լուծումներ, որոնք նպաստում են Ձեր բիզնեսի թիրախային լսարանի ներգրավմանը:
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Globalitschool/" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Դասընթացներ
+                            </h3>
+                            <ul>
+                                {% for f in facultets %}
+                                <li><a href="{% url 'facultet_det' fac_slug=f.slug %}">{{ f.name }}</a></li>
+                                {% endfor %}
+                                <!-- 
+                                <li><a href="#">Վեբ դիզայն</a></li>
+                                <li><a href="#">Գրաֆիկական դիզայն</a></li>
+                                <li><a href="#">Բիզնես և Մարքեթինգ</a></li>
+                                <li><a href="#">Հաշվապահություն</a></li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Կայքի քարտեզ
+                            </h3>
+                            <ul>
+                                <li><a href="{% url 'facultets' %}">Դասընթացներ</a></li>
+                                <li><a href="{% url 'about' %}">Մեր մասին</a></li>
+                                {% for se in service %}
+                                <li><a href="{% url 'service_det' serv_slug=se.slug %}">{{se.name}}</a></li>
+                                {% endfor %}
+                                <!-- <li><a href="#">Ծառայություններ</a></li> -->
+                                <!-- <li><a href="#"> Ստարտափ նախագծեր </a></li>
+                                <li><a href="#"> Գործընկերներ</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Հետադարձ կապ
+                            </h3>
+                            <p>
+                                ք. Երևան Պ. Սևակ 15/1 <br>
+                                ք. Աբովյան գ. Արամուս Մշակույթի տուն <br>
+
+                                <a href="tel:+37455560590">+374 55 560 590</a> <br>
+                                <a href="tel:+37495355255">+374 95 355 255</a> <br>
+                                <a href="tel:+37494806714">+374 94 806 714</a> <br>
+                                <a href="tel:+37441806714">+374 41 806 714</a> <br>
+                                <a href="tel:+37443960950">+374 43 960 950</a> <br>
+                                <a href="tel:+37498960950">+374 98 960 950</a> <br>
+                                <a href="mailto:gitedu@bk.ru">gitedu@bk.ru</a><br>
+                                <a href="mailto:edu@gitedu.am">globalit@gitedu.am</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Բոլոր հեղինակային իրավունքները
+                            պաշտպանված են: | <i class="fa fa-heart-o" aria-hidden="true"></i> Կայքը պատրաստված է <a
+                                href="/" target="_blank">"ԳԼՈԲԱԼ ԻՏ" (ՍՊԸ)-ի </a> կողմից, որը հանդիսանում է ընկերության
+                            Պաշտոնական կայքէջը: Կայքից նույթ տեղադրելիս հղումը gitedu.am-ին պարտադիր է:</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    {% if not user.is_authenticated %}
+    <!-- form itself end-->
+    <form id="test-form" class="white-popup-block mfp-hide" action="/login" method="POST">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="logo text-center">
+                    <a href="#">
+                        <img src="{% static 'img/logogit.png' %}" alt="" width="350px">
+                    </a>
+                </div>
+                <h3>Մուտք</h3>
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Մուտքանուն" name="username">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="password" placeholder="Գաղտանբառ" name="password">
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" class="boxed_btn_orange">Մուտք</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="doen_have_acc">Դուք դեռ գրանցված չե՞ք <a class="dont-hav-acc" href="#test-form2"> Գրանցվել
+                        հիմա</a>
+                </p>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+
+    <!-- form itself end-->
+    <form id="test-form2" class="white-popup-block mfp-hide" action="/save_reg" method="POST">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="logo text-center">
+                    <a href="#">
+                        <img src="{% static 'img/logogit.png' %}" alt="" width="350px">
+                    </a>
+                </div>
+                <h3>Գրանցվել Հիմա</h3>
+                <form action="/save_reg" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Անուն" name="name">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Ազգանուն" name="lname">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Մուտքանուն" name="username">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="password" placeholder="Գաղտնաբառ" name="password">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="Password" placeholder="Կրկնել գաղտնաբառը" name="password_rep">
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" class="boxed_btn_orange">Գրանցվել</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+    {% endif %}
+
+    {% if not user.is_authenticated %}
+    <form id="numbers-form" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="logo text-center">
+                    <a href="#">
+                        <img src="{% static 'img/logogit.png' %}" alt="" width="350px">
+                    </a>
+                </div>
+                <h3>Մեր կոնտակտները</h3>
+                <div class="tel_conn_info_div row">
+                    <span style="background-color: orange;" class="tel_conn_info"><a href="tel:+37494806714"><i
+                                class="fa fa-phone"></i> +374 94 806 714</a></span>
+                    <span style="background-color: #3FE05D;" class="tel_conn_info"><a
+                            href="https://api.whatsapp.com/send?phone=37494806714"><i class="fab fa-whatsapp"></i> +374
+                            94 806 714</a></span>
+                </div>
+                <div class="tel_conn_info_div row">
+                    <span style="background-color: #784F97;" class="tel_conn_info"><a
+                            href="viber://chat?number=37494806714"><i class="fab fa-viber"></i> +374 94 806
+                            714</a></span>
+                    <span style="background-color: #2A9FD9;" class="tel_conn_info"><a
+                            href="https://t.me/+37494806714"><i class="fab fa-telegram-plane"></i> +374 94 806
+                            714</a></span>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% endif %}
+
+    <!-- JS here -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+
+    <!--contact js-->
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v9.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="960202934179404" theme_color="#a695c7"
+        logged_in_greeting="Ողջույն, ինչո՞վ կարող եմ օգնել:" logged_out_greeting="Ողջույն, ինչո՞վ կարող եմ օգնել:">
+    </div>
+
+</body>
+
+</html>

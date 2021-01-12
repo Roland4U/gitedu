@@ -1,0 +1,373 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://gitedu.am",
+  "@type": "IT Educatin center / ՏՏ ուսումնական կենտրոն",
+  "itemListElement": [{
+    "@type": "Համար 1 ուսումնական կենտրոնը ՏՏ ոլորտում: Մեր կարգախոսն է՝ Ուսու, պրակտիկա, աշխատանք",
+    "position": 1,
+    "name": "Գլխավոր էջ",
+    "item": "https://gitedu.am"
+  },{
+    "@type": "Հիմնադիր և գործադիր տնօրեն՝",
+    "position": 2,
+    "name": "Գևորգ Քոսյան",
+    "item": "https://gitedu.am"
+  },{
+    "@type": "Գլոբալ ԻՏ ուսումնական կենտրոն",
+    "position": 3,
+    "name": "Միայն երաշխավորված որակ",
+    "item": "https://gitedu.am"
+  },{
+    "@type": "Director",
+    "position": 4,
+    "name": "Gevorg Kosyan",
+    "item": "https://gitedu.am"
+  }]
+}
+</script>
+
+    <!-- slider_area_start -->
+    {% if show_err %}
+      {% include 'includes/err_include.html' %}
+    {% endif %}
+    <div class="slider_area ">
+        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="illastrator_png">
+                          <a class="popup-with-form" href="#video-form">
+                            <img src="{% static 'img/banner/edu_ilastration.png' %}" alt="">
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="slider_info">
+                            <h3>Կրթություն <br>
+                                Պրակտիկա <br>
+                                Աշխատանք</h3>
+                            <a href="{% url 'facultets' %}" class="boxed_btn">Ընտրիր քո մասնագիտությունը</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+  
+
+
+<!-- Slider start -->
+<div class="home-demo">
+    <div class="owl-carousel owl-theme" style="cursor: default;">
+        
+      <div class="item item-1">
+          
+        <h2>Նորարարություն</h2>
+        <p class="txt">Հաշվի առնելով ՏՏ ոլորտի ակնթարթային զարգացումը՝ ուսումնասիրում ենք նորագույն տեխնոլոգիաները և մեր ուսանողների հետ միասին նպաստում դրանց զարգացմանն ու գործնական հարթակում կիրառմանը։ </p>
+      </div>
+
+      <div class="item item-2">
+          
+        <h2>Փորձառու թիմ</h2>
+        <p class="txt">Մեր փորձառու մասնագետների օգնությամբ կհաղթահարեք յուրաքանչյուր դժվարություն և հնարավորություն կունենաք ուղելու հարցեր ոչ միայն դասընթացի ընթացքում այլ նաև հետո։ </p>
+      </div>
+      
+      <div class="item item-3">
+          
+        <h2>Ստեղծարարություն</h2>
+        <p class="txt">Խնդիրները նոր հնարավորությունների վերածելու ճկունություն և ստեղծագործ մոտեցումների կիրառման էկոհամակարգ։ </p>
+      </div>
+
+      <div class="item item-4">
+          
+        <h2>Որակյալ կրթություն</h2>
+        <p class="txt">Ուսումնական մեթոդիկան հիմնված է պրակտիկ հանձնարարությունների հիման վրա, այդպիսով, գիտելիքներն ամրապնդվում են անմիջապես գործնականում:
+
+ </p>
+      </div>
+
+    <div class="item item-5">
+          
+        <h2>Նոր հորիզոններ</h1></h2>
+        <p class="txt">Կստեղծենք նոր հորիզոններ և հեռանկարներ՝ նպաստելու ապագայի մասնագիտության զարգացմանը և հաջողություններին։ </p>
+      </div>
+
+    <div class="item item-6">
+          
+        <h2>Թիմային աշխատանք</h2>
+        <p class="txt">Մենք խրախուսում ենք թիմային աշխատանքը՝ օգտագործելով ՏՏ ոլորտի ժամանակակից տեխնոլոգիաները, ինչպես օրինակ Slack-ը և GitHub-ը </p>
+      </div>
+
+    <div class="item item-7">
+          
+        <h2>Ճկուն վճարային համակարգ</h2>
+        <p class="txt">Վճարման 5 եղանակ՝ առցանց, տերմինալային, կանխիկ, բանկային և փոխանցումով։ Ինչպես նաև կատարելով վճարում iDram վճարային համակարգի միջոցով կստանաք cashback: </p>
+      </div>
+    
+    <div class="item item-8">
+          
+        <h2>Հրավիրիր ընկերոջդ</h2>
+        <p class="txt">Հրավիրելով ձեր ընկերոջը մասնակցելու որևէ դասընթացի, Դուք կօգտվեք 10% զեղչային համակարգից, որը կարող եք կիրառել ցանկացած ժամանակ։</p>
+      </div>
+
+  <div class="item item-9">
+          
+        <h2>Քո կողքին</h2>
+        <p class="txt">Այո, այո, մենք ունենք մասնաճյուղեր ինչպես Երևանում այնպես էլ մարզերում հնարավորություն տալով անկախ հեռավորությունից ստանալ որակյալ կրթություն։</p>
+      </div>
+
+<div class="item item-10">
+          
+        <h2>Պրոֆեսիոնալիզմ</h2>
+        <p class="txt">Մենք կիրառում ենք ծրագրավորման ուսուցման լավագույն մեթոդները՝ պատրաստելով որակյալ կադրեր և ապահովելով մեր ուսանողների համար բարձր վարձատրվող հեռանկարային աշխատանք։</p>
+      </div>
+    </div>
+  </div>
+<script src="{% static 'dist/script.js' %}"></script>
+
+<!-- Slider end -->
+
+
+  <!-- //////////////////////////////////////////////////////////////// -->
+  <div class="container-fluid">
+  <div class="row">
+    {% for f in fac %}
+    {% if f.sow_in_index %}
+    <div class="col-sm-4" style="background-image: linear-gradient(to bottom right, {{ f.grad_color1 }}, {{ f.grad_color2 }});">
+    <div id="mySiteGeekBrains">
+  <div id="containermy">
+    <div id="divblocks" class="blockhover">
+        <a href="{% url 'facultet_det' fac_slug=f.slug %}">
+            <div id="padding" align="center"> <p align="center"><img  src="{{ f.image.url }}" alt="" width="280" /> </p>
+            <p id="title" align="center">{{f.name}}</p>
+        </a>
+        <ul class="myulclassg">
+          {% for t in f.trainings.all %}
+          <a href="{% url 'training_det' fac_slug=f.slug tr_slug=t.slug %}">
+            <li>
+            <p style="width: 100%;" id="lileft">
+              {{ t.name }}
+            </p>
+            <p id="right"></p>
+            <p id="right" {% if t.status == "Շուտով" %} style="color:  #ffcc80" {% endif %} >{{ t.status }}</p>
+            <p id="img">
+            <img src="{{ t.image.url }}" alt="">
+            </p>
+          </li>
+          </a>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+    {% endif %}
+{% endfor %}
+       </ul>     
+     </div>
+   </div>
+     </div>
+   </div>
+   </div>
+   </div>
+   </div>
+  
+
+
+
+      <!-- our_courses_start -->
+    <div class="our_courses">
+        <div class="container">
+                        <div class="row">
+                <div class="col-xl-3 col-md-6 col-lg-6">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <img src="{% static 'img/aravelutyunner/code-course-illustration.png' %}" width="177px"></img>
+                        </div>
+                        <h3>Որակյալ կրթություն</h3>
+                        <p>
+                            Ուսումնական մեթոդիկան հիմնված է պրակտիկ հանձնարարությունների հիման վրա, այդպիսով, գիտելիքներն ամրապնդվում են անմիջապես գործնականում:
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-6">
+                    <div class="single_course text-center">
+                        <div class="icon blue">
+                            <img src="{% static 'img/aravelutyunner/results-illustration.png' %}" width="177px"></img>
+                        </div>
+                        <h3>Բարձր մոտիվացիա</h3>
+                        <p>
+                            Անընդմեջ մարտահրավերներ և արդյունքների հասնելու ձգտումներ։ Երբ ամեն մի ձեռքբերում գնահատվում է և մոտիվացնում` էլ ավելիին հասնելու:
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-6">
+                    <div class="single_course text-center">
+                        <div class="icon">
+                            <img src="{% static 'img/aravelutyunner/consultation-illustration.png' %}" width="200px"></img>
+                        </div>
+                        <h3>Ծրագրավորողների ակումբ</h3>
+                        <p>
+                            Դասընթացների ավարտից հետո դուք կկարողնանաք մասնակցել կազմակերպվող սեմինարներին և միջոցառումներին....
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-6">
+                    <div class="single_course text-center">
+                        <div class="icon gradient">
+                            <img src="{% static 'img/aravelutyunner/53382.png' %}" width="150px"></img>
+                        </div>
+                        <h3>Ուսանողներին</h3>
+                        <p>
+                            Եթե մասնագետ, ապա փորձառու, եթե կուրսեր, ապա որակյալ, եթե արդյունք, ապա երաշխավորված!
+                            
+              Նվաճեք նորանոր բարձունքներ:
+                            Դեպի գիտելիքահենք երկիր:
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our_courses_end -->
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="single_about_info">
+                        <h3>Մեր մասին</h3>
+                        <p>«ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 
+            2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից:
+            
+            Մենք առաջարկում ենք ծրագրային տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել Ձեր բիզնեսի շահութաբերությունը և նպաստել աճին:
+            Մեր ստեղծարար թիմը համատեղ ուժերով տալիս Է նորարարական լուծումներ, որոնք նպաստում են Ձեր բիզնեսի թիրախային լսարանի ներգրավմանը: </p>
+                        <a href="{% url 'about' %}" class="boxed_btn">Ավելի մանրամասն...</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-6">
+                    <div class="about_tutorials">
+                        <div class="courses">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>20+</span>
+                                    <p> Պրոեկտներ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-blue">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>460+</span>
+                                    <p> Շրջանավարտ</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="courses-sky">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>8</span>
+                                    <p> Մասնաճյուղ</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+
+    <!-- testimonial_area_start -->
+    <div class="testimonial_area testimonial_bg_1 overlay">
+        <div class="testmonial_active owl-carousel">
+            <div class="single_testmoial">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="testmonial_text text-center">
+                                <div class="author_img">
+                                    <img src="{% static 'img/testmonial/author_img.png' %}" width="20px" alt="">
+                                </div>
+                                <p>
+                                    "ԳԼՈԲԱԼ ԻՏ" (ՍՊԸ)<br>
+                                     Հիմնադիր և Գործադիր<br>   
+                                     Տնօրեն՝ Գ. Քոսյան
+
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_testmoial">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="testmonial_text text-center">
+                                <div class="author_img">
+                                    <img src="{% static 'img/testmonial/author_img.png' %}" width="20px"alt="">
+                                </div>
+                                <p>
+                                    Չկիրառվող և չօգտագործվող գիտելիքները հավասարազոր են 0-ի <br> Կյանքում ստացած յուրաքանչյուր գիտելիքով զարգանում են, հզորանում են սակայն առանց ՄԱՐԴԿԱՅԻՆ ՈՐԱԿՆԵՐԻ այդ ամենն ոչինչ է: <br>Մաղթում եմ արդյունավետ ուսում:
+                                    
+                                </p>
+                                <span>- Գ. Քոսյան</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial_area_end -->
+
+
+
+    <!-- subscribe_newsletter_Start -->
+    <div class="subscribe_newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="newsletter_text">
+                        <h3>Բաժանորդգրվեք մեր նորություններին</h3>
+                        <p>Եվ եղեք տեղեկացված համաշխարային ՏՀՏ ոլորտի զարգացւմների մասին առաջինը:</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-6">
+                    <div class="newsletter_form">
+                        <h4>Մուտքագրեր Ձեր Էլ. փոստի հասցեն</h4>
+                        <form action="{% url 'subscribe_mail' %}" class="newsletter_form" method="POST">
+                            {% csrf_token %}
+                            <input type="email" placeholder="Էլ.հասցեն" name="email">
+                            <button type="submit">Բաժանորդագրվել</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- subscribe_newsletter_end -->
+
+
+      <form  id="video-form" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="tel_conn_info_div">
+                  <video width="100%" controls>
+                    <source src="https://video.fevn1-2.fna.fbcdn.net/v/t39.24130-2/78143554_1075414322790590_5964863911001224523_n.mp4?_nc_cat=103&efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ohc=y5oLH2JzihwAQmUWw1-I3gx2OdsakSDVwChDecuFsQ3T7kSVqsBCqGdRw&_nc_ht=video.fevn1-2.fna&oh=8331bded616a3b64f53072a69d900be5&oe=5E44DEFA" type="video/mp4">
+                  </video> 
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

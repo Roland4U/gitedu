@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Global IT Education Center | Ֆակուլտետներ
+{% endblock %}
+
+
+{% block main %}
+<div class="row">
+{% for f in fac %}
+	<div class="card testimonial-card" style="width: 30rem;">
+	  <div class="card-up" style="background-image: linear-gradient(to bottom right, {{ f.grad_color1 }}, {{ f.grad_color2 }}); height: 160px;" ></div>
+	  <div class="avatar mx-auto white col-10" style="margin-top: -125px;">
+	    <img width="100%" src="{{ f.image.url }}" class="rounded-circle" alt="" style="object-fit: cover; max-height: 235px;">
+	  </div>
+	  <div class="card-body">
+	    <h4 class="card-title">{{ f.name }}</h4>
+	    <hr>
+	    <p> {{ f.about|safe|truncatewords:20 }} </p>
+	    <a href="{% url 'facultet_det' fac_slug=f.slug %}" class="btn btn-gitedu">Դիտել ավելին</a>
+	  </div>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}

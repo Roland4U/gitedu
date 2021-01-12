@@ -1,0 +1,68 @@
+.home-demo {  background-image: url(../img/banner/paralex.jpg);
+ }
+
+.home-demo .item {
+    
+    height:300px;
+    
+   
+}
+
+.txt{
+    margin: 0 40px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.item-1{
+    background: linear-gradient(+156deg,#DB0000 10%,#DB04C1);
+    border-radius: 30px;
+    
+}
+
+.item-2{
+    background: linear-gradient(+156deg,#FF5714 10%,#ffcd00);
+    border-radius: 30px;
+}
+.item-3{
+    background: linear-gradient(+156deg,#e3001f 10%,#ffcd00);
+    border-radius: 30px;
+}
+.item-4{
+    background: linear-gradient(+156deg,#E85779 10%,#6299E8);
+    border-radius: 30px;
+}
+.item-5{
+    background: linear-gradient(+156deg,#651ee9 10%,#42387a);
+    border-radius: 30px;
+}
+.item-6{
+    background: linear-gradient(+156deg,#2B9681 10%,#0F5245);
+    border-radius: 30px;
+}
+.item-7{
+    background: linear-gradient(+156deg,#4296CF 10%,#2A6A9A);
+    border-radius: 30px;
+}
+.item-8{
+    background: linear-gradient(+156deg,#A24DEC 10%,#3E35CE);
+    border-radius: 30px;
+}
+.item-9{
+    background: linear-gradient(+156deg,#00CE2D 10%,#FFDB00);
+    border-radius: 30px;
+}
+.item-10{
+    background: linear-gradient(+156deg,#a20b38 10%,#ff507d);
+    border-radius: 30px;
+}
+.home-demo h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 3.5rem 0;
+    margin: 0;
+    font-weight: 600;
+    font-family: noh_light;
+    letter-spacing: .01em;
+    line-height: 1.5;
+}

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Global IT Education Center | Ֆակուլտետներ
+{% endblock %}
+
+
+{% block main %}
+<style>
+    table.bgfromfac{
+        background-image: linear-gradient(to bottom right, {{ fac.grad_color1 }}, {{ fac.grad_color2 }});
+    }
+    table.bggradred{
+        background-image: linear-gradient(to bottom right, #FF0000, #FF4500);
+    }
+    table.bggradorange{
+        background-image: linear-gradient(to bottom right, #FFA500, #DAA520);
+    }
+    table.bggradblue{
+        background-image: linear-gradient(to bottom right, #0000FF, #0FA6EA);
+    }
+    table.bggradgreen{
+        background-image: linear-gradient(to bottom right, #00B200, #00E100);
+    }
+    table.bgred{
+        background-color: #FF0000;
+    }
+    table.bgorange{
+        background-color: #FFA500;
+    }
+    table.bgblue{
+        background-color: #0000FF;
+    }
+    table.bggreen{
+        background-color: #00B200;
+    }
+    @media  (max-width: 360px) {
+  .respdiv{
+    display:block !important;
+  }
+  .btn-gitedu{
+      font-size:13px !important;
+  }
+  
+}
+</style>
+<div style="display: flex;">
+	<div class="col-4 divforresp"  style="background-image: linear-gradient(to bottom right, {{ fac.grad_color1 }}, {{ fac.grad_color2 }});">
+		<img width="100%" src="{{ tr.image.url }}" alt="">
+		<div class="pre-scrollable">
+		<ul class="myulclassg">
+		{% for f in fac.trainings.all %}
+			<a {% if f.name != tr.name %} href="{% url 'training_det' fac_slug=fac.slug tr_slug=f.slug %}" {% endif %} class="fac_ch_all">
+			  <li {% if f.name == tr.name %} style="    background-color: #D3D3D3;cursor: default;" {% endif %}>
+			  <p style="width: 100%;);" id="lileft">
+			    {{ f.name }}
+			  </p>
+			  <p id="right1" {% if f.status == "Շուտով" %} style="color:  #ffcc80" {% endif %} >{{ f.status }}</p>
+			</li>
+			</a>
+		{% endfor %}
+	</ul>
+	</div>
+	</div>
+	<div class="col-8 divforrespall">
+		<div class="respdiv" style="display: flex;">
+		<h1><b>{{ tr.name }}</b></h1>
+		<p id="right1" {% if tr.status == "Շուտով" %} style="color:  #ffcc80" {% endif %} >{{ tr.status }}</p>
+		</div>
+		<hr>
+		<h4>
+			{{tr.about|safe}}
+		</h4>
+		<div class="row">
+		</div>		
+		<br>
+		<a class="btn btn-gitedu dont-hav-acc" href="#test-form">Ուղարկել մասնակցության հայտ</a>		
+	</div>
+</div>
+
+    <!-- form itself end-->
+    <form id="test-form" class="white-popup-block mfp-hide" action="{% url 'reg_to_tr' %}" method="POST">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="logo text-center">
+                    <a href="#">
+                        <img src="{% static 'img/logogit.png' %}" alt="" width="100%">
+                    </a>
+                </div>
+                <h3>Մասնակցության հայտ</h3>
+                <form action="{% url 'reg_to_tr' %}" method="POST">
+                  {% csrf_token %}
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="hidden" name="fa" value="{{ fac.name }}">
+                            <input required type="hidden" name="tra" value="{{ tr.name }}">
+                            <input required type="hidden" name="url" value="{{ request.path }}">
+                            <input required type="text" placeholder="Անուն" name="name" value="{{ user.first_name }}">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Ազգանուն" name="lname" value="{{ user.last_name }}">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Հեռախոսահամար" name="phone">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="email" placeholder="Email" name="email" value="{{ user.email }}">
+                        </div>
+                        <div class="col-xl-12 col-md-12">
+                            <input required type="text" placeholder="Պրոմո կոդ" name="promocode">
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" class="boxed_btn_orange">Ուղարկել</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+
+{% endblock %}

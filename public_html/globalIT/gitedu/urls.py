@@ -1,10 +1,13 @@
+from django import urls
 from django.urls import path
+from django.urls.conf import include
 from .views import *
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('', home, name='home'),
     path('about', about, name='about'),
+    path('api/', include('gitedu.api.urls')),
     path('subscribe_mail', subscribe_mail, name='subscribe_mail'),
     path('facultet/<fac_slug>/', facultet_det, name='facultet_det'),
     path('service/<serv_slug>/', service_det, name='service_det'),

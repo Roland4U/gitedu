@@ -12,6 +12,9 @@ class facultet(models.Model):
 	grad_color1 =  models.CharField(max_length=10, default = '#326b02')
 	grad_color2 =  models.CharField(max_length=10, default = '#CEF9AB')
 
+	class Meta:
+		pass
+
 	def __str__(self):
 		return str(self.name)
 

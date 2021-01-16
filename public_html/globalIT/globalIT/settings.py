@@ -35,7 +35,6 @@ LOGIN_REDIRECT_URL = "/"
 
 INSTALLED_APPS = [
     'admin_interface',
-    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor_uploader',
+    'rest_framework',
+    'colorfield',
     'ckeditor',
     'gitedu',
 ]

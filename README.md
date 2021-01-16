@@ -1,4 +1,6 @@
 # gitedu
-Virtualenv activate
-For linux: source .venv/bin/activate
-For Windows: pip install -r req.txt          
+Create new python virtual enviroment and install requiraments.
+
+
+ #### API Docs: '/swagger and /redoc
+    
